@@ -1,0 +1,503 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: var(--surface);
+}
+.login-story {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 42px;
+  color: #fff;
+  background: linear-gradient(135deg, #a81f2c, #d83235 65%, #e68b39);
+}
+.login-story::after {
+  content: "语";
+  position: absolute;
+  right: -46px;
+  bottom: -140px;
+  font-family: var(--hanzi);
+  font-size: 420px;
+  color: #ffffff08;
+  pointer-events: none;
+}
+.login-story .brand {
+  color: #fff;
+}
+.login-story .brand strong {
+  font-size: 24px;
+}
+.login-story .brand-mark {
+  border: 1px solid #ffffff50;
+  background: #ffffff15;
+  box-shadow: none;
+}
+.login-story-copy {
+  margin-block: auto;
+  padding-block: 52px;
+  position: relative;
+  z-index: 1;
+}
+.login-story h1 {
+  font-size: clamp(32px, 3.7vw, 55px);
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+  margin: 20px 0 17px;
+}
+.login-story h1 span {
+  color: #ffdfa1;
+}
+.login-story-copy > p {
+  color: #fff0e7;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.login-characters {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.login-characters > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 122px;
+  background: #fff4e2;
+  border: 1px solid #ffe5c6;
+  box-shadow: 0 12px 24px #6c1e252a;
+  border-radius: 14px;
+  font-size: 61px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #bd3033;
+  transform: rotate(-7deg);
+}
+.login-characters > span + span {
+  transform: rotate(8deg) translateY(10px);
+  background: #ffffff1c;
+  border-color: #ffffff55;
+  color: #ffdda0;
+}
+.login-characters small {
+  font: 500 10px var(--font);
+  margin-top: 9px;
+}
+.login-story-footer {
+  color: #ffe6ce;
+  font-size: 12px;
+  letter-spacing: 0.17em;
+  position: relative;
+  z-index: 1;
+}
+.login-form-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.login-form-card {
+  width: min(350px, 100%);
+  margin-block: auto;
+  padding-block: 40px;
+}
+.login-icon {
+  width: 47px;
+  height: 47px;
+  border-radius: 13px;
+  margin-bottom: 20px;
+}
+.login-form-card h2 {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  margin: 8px 0;
+}
+.login-form-card > .muted {
+  font-size: 12px;
+}
+.login-page fieldset,
+.account-modal fieldset,
+.first-password-card fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.login-form-card form {
+  margin-top: 24px;
+}
+.account-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 14px 0;
+}
+.account-field > span,
+.account-field > label {
+  font-weight: 700;
+  font-size: 12px;
+}
+.account-field > input,
+.account-field select,
+.password-input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--soft);
+  min-height: 43px;
+  padding: 9px 11px;
+  font-size: 13px;
+  color: var(--text);
+}
+.account-field input::placeholder {
+  color: var(--subtle);
+}
+.account-field small {
+  color: var(--subtle);
+  font-size: 10px;
+}
+.password-input {
+  display: flex;
+  gap: 5px;
+  padding: 0 6px 0 11px;
+}
+.password-input input {
+  width: 100%;
+  border: 0;
+  background: none;
+  min-width: 0;
+  outline: none;
+}
+.password-input:focus-within {
+  outline: 2px solid #f3a49b;
+  outline-offset: 2px;
+}
+.password-input input:focus-visible {
+  outline: none;
+}
+.password-input button {
+  display: grid;
+  place-items: center;
+  color: var(--subtle);
+  width: 30px;
+  flex-shrink: 0;
+}
+.login-form-card .btn,
+.change-password form .btn {
+  margin-top: 15px;
+  min-height: 43px;
+}
+.account-note {
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--subtle);
+  font-size: 11px;
+  line-height: 1.8;
+}
+.account-note svg {
+  margin-top: 2px;
+  color: var(--red);
+}
+.login-copyright {
+  font-size: 10px;
+  color: var(--subtle);
+  text-align: center;
+}
+.account-error,
+.account-success {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 9px 10px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.account-error {
+  color: var(--red);
+  background: var(--red-soft);
+  border: 1px solid var(--red-border);
+}
+.account-success {
+  color: var(--green);
+  background: var(--green-soft);
+}
+.account-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 35px;
+  padding: 6px 10px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+}
+.account-button:hover {
+  border-color: var(--red-border);
+  color: var(--red);
+}
+.account-modal {
+  width: min(820px, 100%);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  padding: 20px;
+}
+.account-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.account-modal-head h2 {
+  font-size: 23px;
+  margin: 5px 0;
+}
+.account-modal-head .tag {
+  margin-left: 6px;
+}
+.account-panel-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  margin: 17px 0;
+}
+.account-panel-nav button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+}
+.account-panel-nav button.active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+.account-panel-nav .logout-btn {
+  margin-left: auto;
+}
+.admin-accounts {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 25px;
+}
+.admin-accounts h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.admin-accounts h3 svg {
+  color: var(--red);
+}
+.admin-create .btn {
+  margin-top: 8px;
+}
+.admin-list {
+  border-left: 1px solid var(--line);
+  padding-left: 22px;
+}
+.admin-account-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 13px;
+}
+.admin-account-list article {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+.admin-account-list strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.admin-account-list small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+.admin-account-list article > .tag {
+  margin-left: auto;
+}
+.account-loading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 20px 0;
+  color: var(--subtle);
+  font-size: 12px;
+}
+.change-password {
+  max-width: 350px;
+}
+.change-password h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.first-password-page,
+.session-loading {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 15px;
+  padding: 24px;
+}
+.first-password-card {
+  width: min(410px, 100%);
+  padding: 24px;
+}
+.first-password-card > .eyebrow {
+  margin: 17px 0 10px;
+}
+.first-password-card > .text-btn {
+  margin-top: 12px;
+}
+.session-loading {
+  color: var(--muted);
+  font-size: 12px;
+}
+.session-warning {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 12px;
+  padding: 10px;
+}
+.session-warning button {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.spin {
+  animation: account-spin 1s linear infinite;
+}
+@keyframes account-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.admin-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-filters .account-field { flex: 1 1 110px; min-width: 0; margin: 8px 0; font-size: 11px; font-weight: 700; }
+.admin-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-bottom:18px; }
+.admin-summary div { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:10px; }
+.admin-summary span { display:block; color:var(--muted); font-size:10px; }
+.admin-summary strong { font-size:21px; }
+.admin-pagination { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:12px; font-size:11px; color:var(--muted); }
+.admin-edit-actions { display:flex; gap:8px; margin-top:16px; }
+.admin-edit-actions .btn { flex:1; min-width:0; }
+.admin-edit-actions .save-edit { background:#16845d; color:white; }
+.admin-edit-actions .cancel-edit { background:var(--track); color:var(--text); border-color:var(--line); }
+@media(max-width:540px){.admin-summary{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width: 760px) {
+  .login-story {
+    padding: 25px;
+  }
+  .login-form-side {
+    padding: 25px;
+  }
+  .login-story h1 {
+    font-size: 34px;
+  }
+  .header-actions {
+    gap: 5px;
+  }
+  .account-button span {
+    display: none;
+  }
+  .account-button {
+    width: 34px;
+    padding: 5px;
+  }
+}
+@media (max-width: 540px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+  .login-story {
+    padding: 20px 24px;
+    min-height: 80px;
+  }
+  .login-story-copy,
+  .login-story-footer {
+    display: none;
+  }
+  .login-form-side {
+    padding: 0 25px 24px;
+  }
+  .login-form-card {
+    padding-block: 28px;
+  }
+  .login-form-card h2 {
+    font-size: 28px;
+  }
+  .admin-accounts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .admin-list {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 17px 0 0;
+  }
+  .account-modal {
+    padding: 14px;
+  }
+  .account-panel-nav {
+    gap: 10px;
+  }
+  .account-panel-nav button {
+    font-size: 10px;
+    gap: 4px;
+  }
+  .account-panel-nav svg {
+    width: 13px;
+  }
+  .first-password-card {
+    padding: 18px;
+  }
+}
+@media (max-width: 390px) {
+  .header-main .brand strong {
+    font-size: 16px;
+  }
+  .header-main .brand small {
+    font-size: 6px;
+  }
+  .header-main .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .header-main .header-actions {
+    gap: 3px;
+  }
+  .header-main .avatar,
+  .header-main .account-button,
+  .header-main .header-actions > .icon-btn {
+    width: 28px;
+    height: 30px;
+    padding: 3px;
+  }
+}
